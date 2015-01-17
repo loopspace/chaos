@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Chaos
+    </title>
+    <script type="text/javascript" src="chaos.js">
+    </script>
+  </head>
+  <body>
+    <div style="position: relative; height: 500px;">
+      <canvas id="graph" width="500" height="500" 
+	      style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+      <canvas id="gaxes" width="500" height="500" 
+	      style="position: absolute; left: 0; top: 0; z-index:
+		     1;"></canvas>
+      <canvas id="bifur" width="500" height="500" 
+	      style="position: absolute; left: 550px; top: 0; z-index: 0;"></canvas>
+      <canvas id="baxes" width="500" height="500" 
+	      style="position: absolute; left: 550px; top: 0; z-index:
+		     1;"></canvas>
+    </div>
+    <form id="form">
+    </form>
+    <table>
+      <tr>
+	<td>
+	  <label for="coefficient">
+	    Coefficient:
+	  </label>
+	</td><td>
+	  <input type="text" id="coefficient" name="coefficient"
+		 value=1 form="form">
+	</td>
+      </tr>
+      <tr>
+	<td>
+	  <label for="point">
+	    Initial Point:
+	  </label>
+	</td><td>
+	  <input type="text" id="point" name="point"
+		 value=.5 form="form">
+	</td>
+      </tr>
+      <tr>
+	<td>
+	</td><td>
+	  <button id="pause" name="pause">Pause</button>
+	</td>
+      </tr>
+      <tr>
+	<td>
+	</td><td>
+	  <button id="step" name="step">Step</button>
+	</td>
+      </tr>
+    </table>
+  </body>
+</html>
