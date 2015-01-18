@@ -38,10 +38,10 @@ function init() {
     bctx = b.getContext("2d");
     bactx = ba.getContext("2d");
 
-    bactx.save();
+/*    bactx.save();
     drawAxes(bactx,-.1,1.1,.1,-.1,1.1,.1);
     bactx.restore();
-
+*/
     bctx.save();
 
     var ret = drawAxes(bctx,-.1,1.1,.1,-.1,1.1,.1);
@@ -49,14 +49,14 @@ function init() {
     var sy = ret[1];
     bctx.fillStyle = "rgba(200,200,200,255)";
     var npt;
-    for (var c = 0; c<4; c += .01) {
+    for (var c = 2; c<4; c += .005) {
 	npt = .7;
 	for (var i=0; i<1000; i++) {
 	    npt = c*npt*(1-npt);	
 	}
 	for (var i=0; i<100; i++) {
 	    bctx.beginPath();
-	    bctx.arc(sx*c/4,sy*npt,.5,0,2*Math.PI);
+	    bctx.arc(sx*(c-2)/2,sy*npt,.5,0,2*Math.PI);
 	    bctx.fill();
 	    npt = c*npt*(1-npt);	
 	}
@@ -142,7 +142,7 @@ function reset() {
     }
     for (var i=0; i<100; i++) {
 	bactx.beginPath();
-	bactx.arc(sx*coeff/4,sy*npt,ptrad,0,2*Math.PI);
+	bactx.arc(sx*(coeff-2)/2,sy*npt,ptrad,0,2*Math.PI);
 	bactx.fill();
 	npt = coeff*npt*(1-npt);	
     }
